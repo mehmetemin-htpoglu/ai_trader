@@ -11,13 +11,14 @@ def borsa_analizi_yap(hisse_kodu):
     
     # 2. PROMPT (TALİMAT) HAZIRLAMA
     prompt = f"""
-    Sen profesyonel bir yatırım danışmanısın. 
-    Aşağıdaki {hisse_kodu} kodlu hissenin son 5 günlük kapanış fiyatları ve hacim verileri var:
+    
+    You are a professional investment advisor. 
+    Below are the closing prices and volume data for the last 5 days for the stock with the code {hisse_kodu}:
     
     {ozet_veri}
     
-    Bu verileri analiz et. Fiyat trendi ne yönde? Hacim artışları neyi işaret ediyor olabilir? 
-    Kısa bir analiz yap ve "Yatırım Tavsiyesi Değildir" notuyla görüşünü bildir.
+    Analyze this data. What is the price trend? What might the volume increases indicate?
+    Conduct a brief analysis and share your opinion with a "Not Investment Advice" note.
     """
 
     # 3. LLM'E SORMA (Ollama üzerinden)
